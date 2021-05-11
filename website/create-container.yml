@@ -18,4 +18,4 @@
     command: docker pull athirac/phpimage
     
   - name: Create container using this image
-    command: docker container run -d --name phpcontainer -p 8080:8080 athirac/phpimage
+    command: docker container run -d --name phpcontainer -p 8080:80 athirac/phpimage
