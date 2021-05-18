@@ -1,6 +1,4 @@
-FROM php:apache
-
-RUN docker-php-source extract \
-    && docker-php-ext-install mysqli
-
-COPY . /var/www/html
+FROM devopsedu/webapp
+ADD . /var/www/html
+RUN rm /var/www/html/index.html
+CMD apachectl -D FOREGROUND
