@@ -9,7 +9,7 @@ chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 
 driver = webdriver.Chrome(executable_path='/usr/lib64/chromium-browser/chromedriver',chrome_options=chrome_options)
-url = "http://34.122.237.192:8080/"
+url = "http://104.198.138.81:8080/"
 try:
     driver.get(url)
     driver.maximize_window()
