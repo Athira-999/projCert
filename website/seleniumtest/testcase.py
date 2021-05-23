@@ -35,3 +35,4 @@ if expected_text == about_text:
 else:
     print("Expected result and Actual result doesn't matching, hence stopping the container deployed on test server")
     subprocess.call(dockerstop, shell=True)
+    assert expected_text == about_text,"error"
