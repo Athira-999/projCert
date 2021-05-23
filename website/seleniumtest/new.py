@@ -13,11 +13,15 @@ class TestPhpWebsite(unittest.TestCase):
     def test_php(self):
         dockerstop = "docker stop phpcontainer"
         actual_text = self.seltest()
+        print(actual_text)
+        print('\n')
         readFile = open("phpapp.txt", 'r')
         expected_text = readFile.read()
         readFile.close()
-        if (expected_text != actual_text):
-            subprocess.call(dockerstop, shell=True)
+        print(expected_text)
+        #if (expected_text != actual_text):
+        #    subprocess.call(dockerstop, shell=True)
+        assert True
         self.assertEqual(actual_text,expected_text,msg="Actual and expected does not match")
         print("Matching")
 
@@ -40,6 +44,9 @@ class TestPhpWebsite(unittest.TestCase):
             except NoSuchElementException:
                 print("Element not found")
             about_text = about_text1 + "\n" + about_text2
+            #file = open('phpapp.txt','w+')
+            #file.write(about_text)
+            #file.close()
         except Exception as e:
             print("Exception occured <> {}".format(str(e)))
         driver.close()
