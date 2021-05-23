@@ -19,8 +19,8 @@ class TestPhpWebsite(unittest.TestCase):
         expected_text = readFile.read()
         readFile.close()
         print(expected_text)
-        #if (expected_text != actual_text):
-        #    subprocess.call(dockerstop, shell=True)
+        if (expected_text != actual_text):
+            subprocess.call(dockerstop, shell=True)
         assert True
         self.assertEqual(actual_text,expected_text,msg="Actual and expected does not match")
         print("Matching")
