@@ -30,7 +30,7 @@ try:
     readFile.close()
     # Check if the texts match
     if expected_text == about_text:
-        print("Expected result and Actual result is matching")
+        print("Expected result and Actual result match")
     else:
         print("Expected result and Actual result doesn't matching, hence stopping the container deployed on test server")
         subprocess.call(dockerstop, shell=True)
