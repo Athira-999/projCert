@@ -49,9 +49,6 @@ class TestPhpWebsite(unittest.TestCase):
             except NoSuchElementException:
                 print("Element not found")
             about_text = about_text1 + "\n" + "\n" + about_text2
-            file = open('phpapp.txt','w+')
-            file.write(about_text)
-            file.close()
         except Exception as e:
             print("Exception occured <> {}".format(str(e)))
         driver.close()
