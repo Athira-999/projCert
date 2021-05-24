@@ -1,4 +1,4 @@
-- hosts: web2
+- hosts: test
   become: true
   vars :
    mytext: |
