@@ -27,7 +27,7 @@ class TestPhpWebsite(unittest.TestCase):
 
     def seltest(self):
         driver = webdriver.Chrome(executable_path='/usr/lib64/chromium-browser/chromedriver',chrome_options=chrome_options)
-        url = "http://104.198.138.81:8080/"
+        url = "http://34.122.73.52:8080/"
         try:
             driver.get(url)
             driver.maximize_window()
