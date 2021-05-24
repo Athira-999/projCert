@@ -48,7 +48,7 @@ class TestPhpWebsite(unittest.TestCase):
                 about_text2 = driver.find_element_by_xpath("//p[@id = 'PID-ab2-pg']//following::p").text
             except NoSuchElementException:
                 print("Element not found")
-            about_text = about_text1 + "\t" + about_text2
+            about_text = about_text1 + "\n" + about_text2
             #file = open('phpapp.txt','w+')
             #file.write(about_text)
             #file.close()
