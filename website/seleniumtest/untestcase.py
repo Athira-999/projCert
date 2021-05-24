@@ -27,6 +27,7 @@ class TestPhpWebsite(unittest.TestCase):
             subprocess.call(dockerremove, shell=True)
         assert True
         self.assertEqual(actual_text,expected_text,msg="Actual and expected text does not match, hence stopping and removing container from Test Server")
+        print("\n")
         print("Actual and Expected text is Matching. Testing is success. Hence deploying to Prod Server")
 
     def seltest(self):
@@ -47,7 +48,7 @@ class TestPhpWebsite(unittest.TestCase):
                 about_text2 = driver.find_element_by_xpath("//p[@id = 'PID-ab2-pg']//following::p").text
             except NoSuchElementException:
                 print("Element not found")
-            about_text = about_text1 + "\n" + about_text2
+            about_text = about_text1 + about_text2
             #file = open('phpapp.txt','w+')
             #file.write(about_text)
             #file.close()
