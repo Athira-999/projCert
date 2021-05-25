@@ -28,7 +28,7 @@ class TestPhpWebsite(unittest.TestCase):
         assert True
         self.assertEqual(actual_text,expected_text,msg="Actual and expected text does not match, hence stopping and removing container from Test Server")
         print("\n")
-        print("Actual and Expected text is Matching. Testing is success. Hence deploying the container to Prod Server..")
+        print("Actual and Expected text is Matching. Testing is success. Hence deploying the container to Prod Server...")
 
     def seltest(self):
         driver = webdriver.Chrome(executable_path='/usr/lib64/chromium-browser/chromedriver',chrome_options=chrome_options)
