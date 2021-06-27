@@ -26,7 +26,7 @@ class TestPhpWebsite(unittest.TestCase):
             subprocess.call(dockerstop, shell=True)
             subprocess.call(dockerremove, shell=True)
         assert True
-        self.assertEqual(actual_text,expected_text,msg="Actual and expected text does not match, hence stoopping and removing container from Test Server")
+        self.assertEqual(actual_text,expected_text,msg="Actual and expected text does not match, hence stoopping aniid removing container from Test Server")
         print("\n")
         print("Actual and Expected text is Matching. Testing is success. Hence deploying the container to Prod Server...")
 
